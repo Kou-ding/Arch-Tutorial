@@ -27,3 +27,19 @@ yay -S pipes.sh # -S: syncronize and install
 # Updates the packages from the official repositories as well as the AUR repositories
 yay -Syu
 ```
+### Auto mounting drives at startup
+```bash
+# Make a directory to mount the drive to
+sudo mkdir -p /media
+sudo mkdir -p /media/drive_label
+
+# Find your drive's UUID
+blkid
+
+# Make the drive entry inside the fstab file which mounts the system's partitions at startup 
+nvim /etc/fstab
+
+# Add this line at the bottom of the fstab file
+UUID=UUID_string  /media/drive_label  defaults  0  0
+# the parameters are separated by a single tab
+```
