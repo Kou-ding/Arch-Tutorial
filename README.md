@@ -7,7 +7,7 @@ A very detailed tutorial on how to install arch linux.
 # Updates the packages installed form the official arch repositories
 sudo pacman -Syu # -Sy: syncronize, -u: upgrade
 # Install basic applications
-sudo pacman -S discord thunderbird neovim bc ttf-jetbrains-mono-nerd figlet btop htop obsidian gimp vscode wl-clipboard
+sudo pacman -S discord thunderbird neovim bc ttf-jetbrains-mono-nerd figlet btop htop obsidian gimp vscode wl-clipboard partitionmanager libreoffice-fresh
 
 # Useful commands
 sudo pacman -R package_name # -R: Remove
