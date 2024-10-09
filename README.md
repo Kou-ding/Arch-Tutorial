@@ -1,13 +1,34 @@
 # Arch-Tutorial
 A very detailed tutorial on how to install arch linux.
 
+# Easy installation
+When you are booted into the usb stick type:
+```bash
+archinstall
+```
+This will provide a command line based installer that is very easy to use.
+
+### Repositories
+To include or exclude any repositories you need to uncomment or comment the related lines
+inside the pacman configuration file.
+```bash
+# pacman configuration file location 
+sudo nvim /etc/pacman.conf
+```
+For example for multilib you have to uncomment these two lines. 
+```bash
+#[multilib]
+#Include = /etc/pacman.d/mirrorlist
+```
+Finally perform an upgrade:
+```bash
+sudo pacman -Syu
+```
 
 ### Packages
 ```bash
 # Updates the packages installed form the official arch repositories
 sudo pacman -Syu # -Sy: syncronize, -u: upgrade
-# Install basic applications
-sudo pacman -S discord thunderbird neovim bc ttf-jetbrains-mono-nerd figlet btop htop obsidian gimp vscode wl-clipboard partitionmanager libreoffice-fresh
 
 # Useful commands
 sudo pacman -R package_name # -R: Remove
@@ -27,6 +48,15 @@ yay -S pipes.sh # -S: syncronize and install
 # Updates the packages from the official repositories as well as the AUR repositories
 yay -Syu
 ```
+
+### Installing yay
+To access AUR we need a helper such as yay. Installing it is easy just type:
+```bash 
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
+
 ### Auto mounting drives at startup
 ```bash
 # Make a directory to mount the drive to
