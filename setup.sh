@@ -35,7 +35,7 @@ declare -A aurpackages=(
     ["librewolf"]="Web browser"
     ["cpu-x"]="System information tool"
     ["pipes.sh"]="Animated pipes terminal screensaver"
-    ["orchis-theme"]="GTK and icon theme"
+    ["orchis-kde-theme"]="GTK and icon theme"
 )
 
 # Install each package and display the comment
