@@ -36,7 +36,6 @@ declare -A aurpackages=(
     ["cava"]="Audio visualizer for the terminal"
     ["cbonsai"]="Cute bonsai tree generator"
     ["orchis-kde-theme"]="GTK and icon theme"
-    ["davinci-resolve"]="Video editor"
     ["zoom"]="Video conferencing"
     ["signal-desktop"]="Encrypted messaging"
 )
