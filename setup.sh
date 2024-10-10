@@ -5,7 +5,7 @@ sudo pacman -Syu
 
 # List of Arch packages
 declare -A packages=(
-    ["flatpak"]="Sandbox applications"
+    ["flatpak"]="App distribution and package management"
     ["os-prober"]="Detect other operating systems"
     ["firefox"]="Web browser"
     ["thunderbird"]="Email client"
@@ -33,24 +33,40 @@ declare -A aurpackages=(
     ["stremio"]="Video streaming app"
     ["cpu-x"]="System information tool"
     ["pipes.sh"]="Animated pipes terminal screensaver"
-    ["orchis-kde-theme"]="GTK and icon theme"
     ["cava"]="Audio visualizer for the terminal"
     ["cbonsai"]="Cute bonsai tree generator"
+    ["orchis-kde-theme"]="GTK and icon theme"
+    ["davinci-resolve"]="Video editor"
+    ["zoom"]="Video conferencing"
+    ["signal-desktop"]="Encrypted messaging"
 )
 
 # Install each package and display the comment
 for app in "${!packages[@]}"; do
-    echo "Installing $app - ${packages[$app]}"
-    sudo pacman -S --noconfirm $app
+    if pacman -Q $app &> /dev/null; then
+        echo "$app is already installed, skipping."
+    else
+        echo "Installing $app - ${packages[$app]}"
+        sudo pacman -S --noconfirm $app
+    fi
 done
 
 # Install AUR applications
 for app in "${!aurpackages[@]}"; do
-    echo "Installing $app - ${aurpackages[$app]}"
-    yay -S --noconfirm $app
+    if yay -Q $app &> /dev/null; then
+        echo "$app is already installed, skipping."
+    else 
+        echo "Installing $app - ${aurpackages[$app]}"
+        yay -S --noconfirm $app
+    fi
 done
 
 echo "All packages installed successfully."
+
+
+
+
+
 
 
 
