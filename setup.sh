@@ -5,6 +5,7 @@ sudo pacman -Syu
 
 # List of Arch packages
 declare -A packages=(
+    ["flatpak"]="Sandbox applications"
     ["os-prober"]="Detect other operating systems"
     ["firefox"]="Web browser"
     ["thunderbird"]="Email client"
@@ -22,8 +23,6 @@ declare -A packages=(
     ["htop"]="Interactive process viewer"
     ["neofetch"]="System information tool"
     ["cmatrix"]="Matrix-like terminal display"
-    ["cava"]="Audio visualizer for the terminal"
-    ["cbonsai"]="Cute bonsai tree generator"
     ["papirus-icon-theme"]="Papirus icon theme"
     ["ttf-jetbrains-mono-nerd"]="JetBrains Mono font"
 )
@@ -32,10 +31,11 @@ declare -A packages=(
 declare -A aurpackages=(
     ["visual-studio-code-bin"]="Code editor"
     ["stremio"]="Video streaming app"
-    ["librewolf"]="Web browser"
     ["cpu-x"]="System information tool"
     ["pipes.sh"]="Animated pipes terminal screensaver"
     ["orchis-kde-theme"]="GTK and icon theme"
+    ["cava"]="Audio visualizer for the terminal"
+    ["cbonsai"]="Cute bonsai tree generator"
 )
 
 # Install each package and display the comment
