@@ -13,6 +13,7 @@ declare -A packages=(
     ["steam"]="Gaming platform"
     ["discord"]="Chat for gamers and communities"
     ["gimp"]="Image editor"
+    ["kdenlive"]="Video editor"
     ["vlc"]="Media player"
     ["libreoffice-fresh"]="Office suite"
     ["qbittorrent"]="BitTorrent client"
