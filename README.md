@@ -25,6 +25,16 @@ Finally perform an upgrade:
 sudo pacman -Syu
 ```
 
+### Mirrors List
+If a package doesn't exist when trying to download it, it could be a mirror issue. The fix is to update the 
+mirrors list adding new ways of acquiring that package.
+```bash
+# edit the mirrorlist file
+sudo nvim /etc/pacman.d/mirrorlist
+# do a system update to utilize the new mirrors
+sudo pacman -Syu
+```
+
 ### Packages
 ```bash
 # Updates the packages installed form the official arch repositories
