@@ -35,7 +35,7 @@ sudo nvim /etc/pacman.d/mirrorlist
 sudo pacman -Syu
 ```
 
-### Packages
+### Pacman Cheatsheet 
 ```bash
 # Updates the packages installed form the official arch repositories
 sudo pacman -Syu # -Sy: syncronize, -u: upgrade
@@ -50,21 +50,26 @@ sudo pacman -Q package_name # -Q: Query, checks if a program is installed in the
 sudo pacman -Sc # -Sc: Sync clean, clears the old package cache keeping only the recent versions
 sudo pacman -Scc # -Scc: Sync clean clean, clears the entire package cache
 sudo pacman -Rns # -Rns: Remove nodependencies sweep, removes dependencies that are not used by any program
-
-
-# Install applications from the AUR(Arch User Repository)
-# It expands the official repository but the packages aren't guaranteed to work
-yay -S pipes.sh # -S: syncronize and install
-# Updates the packages from the official repositories as well as the AUR repositories
-yay -Syu
 ```
 
 ### Installing yay
-To access AUR we need a helper such as yay. Installing it is easy just type:
+AUR (Arch User Repository) expands the official arch repository. To access AUR we need a helper such as yay. 
+Installing it is as easy as typing:
 ```bash 
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+```
+
+Basic commands:
+```bash
+# Install applications from the AUR
+yay -S pipes.sh # -S: syncronize and install
+
+# Updates the packages from the official repositories as well as the AUR repositories
+yay -Syu
+
+# and others... The flags are the same as pacman's. Refer to the above pacman cheatsheet.
 ```
 
 ### Auto mounting drives at startup
