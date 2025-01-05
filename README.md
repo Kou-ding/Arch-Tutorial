@@ -113,3 +113,16 @@ Use Plymouth to configure the splash screen if you include that option in your g
 Arch wiki links:
 - [Plymouth](https://wiki.archlinux.org/title/Plymouth)
 - [Grub](https://wiki.archlinux.org/title/GRUB#Generated_grub.cfg)
+
+For Plymouth:
+```bash
+# Install plymouth
+sudo pacman -S plymouth 
+# List all available themes
+plymouth-set-default-theme -l
+# Enable example theme 
+plymouth-set-default-theme bgrt
+# Include it in the mkinitcpio
+sudo nano /etc/mkinitcpio.conf
+# HOOKS=(... plymouth ...)
+```
