@@ -100,3 +100,16 @@ Parameter explanation
 Setting the permissions this way negates the problem of having to enter your password every time you want to make changes to the drive.
 This includes simple stuff as moving, copying, deleting files and creating new folders.
 
+### Grub configuration
+```bash
+# Edit grub file
+nano /etc/default/grub
+# Generate configuration based on grub file
+grub-mkconfig -o /boot/grub/grub.cfg
+# For dual boot uncomment this line:
+GRUB_DISABLE_OS_PROBER=false
+```
+Use Plymouth to configure the splash screen if you include that option in your grub file.\\
+Arch wiki links:
+- [Plymouth](https://wiki.archlinux.org/title/Plymouth)
+- [Grub](https://wiki.archlinux.org/title/GRUB#Generated_grub.cfg)
