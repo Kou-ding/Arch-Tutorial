@@ -136,3 +136,19 @@ sudo modprobe 88x2bu
 # After an update, if wifi stops working, rebuild and install the module
 sudo dkms autoinstall # dkms: dynamic kernel module support
 ```
+
+### Nano syntax highlighting 
+Install the nano highlighting package:
+```bash 
+sudo pacman -S nano-syntax-highlighting
+```
+Add the following lines on the top of the nanorc config file:
+```bash
+nano /etc/nanorc
+```
+```
+# Syntax highlighting
+include "/usr/share/nano/*.nanorc"
+include "/usr/share/nano/extra/*.nanorc"
+include "/usr/share/nano-syntax-highlighting/*.nanorc"
+```
