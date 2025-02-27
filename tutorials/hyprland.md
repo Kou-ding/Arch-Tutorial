@@ -23,3 +23,20 @@ These are some quality of life changes on the original hyprland config file:
 
 ### Polybar or wofi dotfiles
 - [ ] To be implemented...
+
+### Customization
+yay packages:
+```
+["pipes.sh"]="Animated pipes terminal screensaver"
+["cava"]="Audio visualizer for the terminal"
+["cbonsai"]="Cute bonsai tree generator"
+["orchis-kde-theme"]="GTK and icon theme"
+```
+pacman packages:
+```
+["cmatrix"]="Matrix-like terminal display"
+["papirus-icon-theme"]="Papirus icon theme"
+["ttf-jetbrains-mono-nerd"]="JetBrains Mono font"
+["neovim"]="Text editor"
+["figlet"]="Text-to-ASCII banner"
+```
