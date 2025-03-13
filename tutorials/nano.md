@@ -18,7 +18,7 @@ sudo pacman -S nano-syntax-highlighting
 sudo nano /etc/nanorc
 
 # Append the following lines on the start of the file
-# Syntax highlighting
+## Syntax highlighting
 include "/usr/share/nano/*.nanorc"
 include "/usr/share/nano/extra/*.nanorc"
 include "/usr/share/nano-syntax-highlighting/*.nanorc"

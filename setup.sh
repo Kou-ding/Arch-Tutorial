@@ -8,7 +8,7 @@ declare -A packages=(
     # Applications
     ["firefox"]="Web browser"
     ["obsidian"]="Note-taking app"
-    ["steam"]="Gaming platform"
+    ["steam-native-runtime"]="Gaming platform"
     ["discord"]="Chat for gamers and communities"
     ["gimp"]="Image editor"
     ["vlc"]="Media player"
@@ -28,6 +28,7 @@ declare -A packages=(
     ["fastfetch"]="System information tool"
     ["os-prober"]="Detect other operating systems"
     ["flatpak"]="App distribution and package management"
+    ["nano-syntax-highlighting"]="Syntax highlighting for nano"
 )
 
 # List of AUR packages
