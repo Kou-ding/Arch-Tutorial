@@ -31,4 +31,10 @@ conda deactivate
 
 # Remove an environment
 conda env remove --name myenv
+
+# Create snapshot
+conda env export > environment.yml
+
+# Recover conda state from snapshot
+conda env create -f environment.yml
 ```
