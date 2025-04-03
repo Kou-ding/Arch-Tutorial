@@ -41,6 +41,7 @@ declare -A aurpackages=(
     ["chromium-snapshot-bin"]="Web browser"
     ["localsend"]="File sharing"
     ["heroic-games-launcher-bin"]="Game launcher"
+    ["miniconda3"]="Python package, dependency and environment management"
 )
 
 # Install each package and display the comment
