@@ -29,6 +29,7 @@ declare -A packages=(
     ["os-prober"]="Detect other operating systems"
     ["flatpak"]="App distribution and package management"
     ["nano-syntax-highlighting"]="Syntax highlighting for nano"
+    ["pacman-contrib"]="Useful pacman utils like rankmirrors"
 )
 
 # List of AUR packages
@@ -65,8 +66,6 @@ for app in "${!aurpackages[@]}"; do
 done
 
 echo "All packages installed successfully."
-
-# Flatpak
 
 
 
