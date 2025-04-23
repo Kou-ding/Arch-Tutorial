@@ -1,5 +1,5 @@
 # Arch-Tutorial
-A very detailed tutorial on how to install arch linux.
+A very detailed tutorial bundle on mastering various aspects of linux and programming.
 
 # Easy installation
 When you are booted into the usb stick type:
