@@ -30,6 +30,13 @@ declare -A packages=(
     ["flatpak"]="App distribution and package management"
     ["nano-syntax-highlighting"]="Syntax highlighting for nano"
     ["pacman-contrib"]="Useful pacman utils like rankmirrors"
+
+    # Latex
+    ["texlive-latex"]="Foundemental Latex installation"
+    ["texlive-latexextra"]="Additional Latex packages"
+    ["texlive-latexrecommended"]="Recommended Latex packages"
+    ["texlive-fontsrecommended"]="Recommended fonts for Latex"
+    ["texlive-xetex"]="XeLatex support"
 )
 
 # List of AUR packages
