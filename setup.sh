@@ -37,6 +37,7 @@ declare -A packages=(
     ["texlive-latexrecommended"]="Recommended Latex packages"
     ["texlive-fontsrecommended"]="Recommended fonts for Latex"
     ["texlive-xetex"]="XeLatex support"
+    ["texlive-binextra"]="Includes latexmk"
 )
 
 # List of AUR packages
