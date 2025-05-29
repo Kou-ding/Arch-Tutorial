@@ -31,6 +31,25 @@ declare -A packages=(
     ["nano-syntax-highlighting"]="Syntax highlighting for nano"
     ["pacman-contrib"]="Useful pacman utils like rankmirrors"
 
+    # Neovim
+    ["neovim"]="Modern text editor"
+    ["kitty"]="Lazyvim compatible terminal emulator"
+    ["luarocks"]="Lua package manager"
+    ["imagemagick"]="Image processing library"
+    ["lazygit"]="Terminal-based Git client"
+    ["fd"]="Simple file finder"
+    ["fzf"]="Command-line fuzzy finder"
+    ["ast-grep"]="Advanced syntax-aware grep"
+    ["lua51"]="Lua 5.1 interpreter"
+    ["wl-clipboard"]="Wayland clipboard management"
+    ["tree-sitter-cli"]="Syntax tree parsing tool"
+    ["ruby"]="Ruby programming language"
+    ["php"]="PHP programming language"
+    ["npm"]="Node.js package manager"
+    ["mermaid-cli"]="mmdc tool for generating diagrams"
+    ["fish"]="User-friendly shell"
+
+    
     # Latex
     ["texlive-latex"]="Foundemental Latex installation"
     ["texlive-latexextra"]="Additional Latex packages"
