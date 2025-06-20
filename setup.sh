@@ -71,7 +71,7 @@ declare -A aurpackages=(
     ["localsend"]="File sharing"
     ["heroic-games-launcher-bin"]="Game launcher"
     ["miniconda3"]="Python package, dependency and environment management"
-    ["orchis-theme-git"]="GTK theme"
+    ["plasma6-themes-orchis-kde-git"]="GTK theme"
 )
 
 # Install each package and display the comment
