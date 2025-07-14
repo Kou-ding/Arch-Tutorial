@@ -22,6 +22,10 @@ tooltip {
     margin: 6px 6px 6px 0px;
     padding: 2px 8px;
 }
+#mode {
+    margin: 6px 6px 6px 12px;
+    padding: 2px 8px;
+}
 
 #workspaces {
     background-color: #322828;
@@ -46,7 +50,7 @@ tooltip {
     color: #1d2021;
 }
 
-#clock {
+#clock,#mode {
     background-color: #322828;
     border: 2px solid #624343;
     color: #d49898;

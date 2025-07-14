@@ -9,7 +9,8 @@
     "margin-left": 0,
 
     "modules-left": [
-        "sway/workspaces"
+        "sway/workspaces",
+        "sway/mode"
     ],
 
     "modules-center": [
@@ -30,6 +31,10 @@
         "disable-scroll": true,
         "all-outputs": true,
         "tooltip": false
+    },
+
+    "sway/mode": {
+        "format":"<span style=\"italic\">{}</span>"
     },
 
     "tray": {
