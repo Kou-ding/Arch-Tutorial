@@ -1,69 +1,85 @@
+/* Color Variables */
+@define-color bg-color #2e3440;
+@define-color workspace-bg #3b4252;
+@define-color workspace-active #81a1c1;
+@define-color workspace-urgent #bf616a;
+@define-color text-color #eceff4;
+@define-color module-bg #434c5e;
+@define-color network #8fbcbb;
+@define-color download #88c0d0;
+@define-color upload #81a1c1;
+@define-color power #bf616a;
+@define-color restart #d08770;
+@define-color sleep #ebcb8b;
+@define-color logout #b48ead;
+
 * {
-	font-size: 20px;
-	font-family: monospace;
+    border: none;
+    border-radius: 4px;
+    font-family: "JetBrains Mono", "Font Awesome 6 Free";
+    font-size: 12px;
+    min-height: 0;
 }
 
 window#waybar {
-	background: #00000000;
-	color: #ffffff;
-}
-
-#workspaces,
-#clock.1,
-#clock.2,
-#clock.3,
-#network,
-#pulseaudio,
-#memory,
-#cpu,
-#battery,
-#disk,
-#tray {
-	background: #00000000;
+    background-color: @bg-color;
+    color: @text-color;
 }
 
 #workspaces button {
-	padding: 0 2px;
-	color: #ffffff;
+    padding: 0 8px;
+    background-color: @workspace-bg;
+    color: @text-color;
 }
+
 #workspaces button.focused {
-	color: #268bd2;
+    background-color: @workspace-active;
 }
-#workspaces button:hover {
-	box-shadow: inherit;
-	text-shadow: inherit;
-}
-#workspaces button:hover {
-	background: #00000000;
-	border: #00000000;
-	padding: 0 3px;
+
+#workspaces button.urgent {
+    background-color: @workspace-urgent;
 }
 
 #network {
-	color: #16cba4;
-}
-#pulseaudio {
-	color: #268bd2;
-}
-#memory {
-	color: #993a56;
-}
-#cpu {
-	color: #6c71c4;
-}
-#battery {
-	color: #129900;
-}
-#disk {
-	color: #be4aaf;
+    background-color: @network;
+    padding: 0 10px;
 }
 
-#clock,
-#network,
-#pulseaudio,
-#memory,
-#cpu,
-#battery,
-#disk {
-	padding: 0 10px;
+#custom-download {
+    background-color: @download;
+    padding: 0 10px;
+}
+
+#custom-upload {
+    background-color: @upload;
+    padding: 0 10px;
+}
+
+#custom-power {
+    background-color: @power;
+    padding: 0 10px;
+}
+
+#custom-restart {
+    background-color: @restart;
+    padding: 0 10px;
+}
+
+#custom-sleep {
+    background-color: @sleep;
+    padding: 0 10px;
+}
+
+#custom-logout {
+    background-color: @logout;
+    padding: 0 10px;
+}
+
+#custom-time, #custom-date, #custom-keyboard {
+    background-color: @module-bg;
+    padding: 0 10px;
+}
+
+#tray {
+    padding: 0 10px;
 }
