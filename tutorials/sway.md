@@ -5,7 +5,7 @@ sway and i3 have compatible config files but have different program dependencies
 sudo pacman -S i3-wm i3blocks i3lock i3status
 
 # sway dependencies
-sudo pacman -S sway swaybg swaylock swayidle waybar kitty brightnessctl slurp polkit pavucontrol iwd grim foot vim nano smartmontools wget wireless_tools wmenu rofi wpa_supplicant xdg-utils xorg-xwayland 
+sudo pacman -S sway swaybg swaylock swayidle waybar kitty brightnessctl slurp polkit pavucontrol iwd grim foot vim nano smartmontools wget wireless_tools wmenu rofi wpa_supplicant xdg-utils xorg-xwayland ttf-noto-nerd ttf-font-awesome
 ```
 
 ### Dependency Table 
@@ -34,3 +34,5 @@ sudo pacman -S sway swaybg swaylock swayidle waybar kitty brightnessctl slurp po
 | wpa_supplicant  | Wi-Fi authentication                    |
 | xdg-utils       | desktop integration utilities           |
 | xorg-xwayland   | X11 compatibility layer for Wayland     |
+| ttf-noto-nerd   | icon fonts                              |
+| ttf-font-awesome| icon fonts                              |
