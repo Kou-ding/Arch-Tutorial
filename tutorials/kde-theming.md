@@ -4,3 +4,6 @@ Colors
 
 Plasma Style
 - Orchis-Dark 
+
+Icons
+- Papirus-Dark
