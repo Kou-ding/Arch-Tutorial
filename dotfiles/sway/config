@@ -18,10 +18,16 @@ set $term kitty
 # Your preferred application launcher
 set $menu rofi -show drun
 
+### Customization
+# Border, Background, Text
+client.focused          #915353 #c98282 #1d2021
+client.unfocused        #624343 #322828 #d49898
+client.focused_inactive #624343 #322828 #d49898
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/Pictures/Wallpapers/sasuke.jpg fill
 #
 # Example configuration:
 #
@@ -215,23 +221,19 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-
+bar {    
     position top
-
+    
     swaybar_command waybar
-
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    #status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 
-    # colors {
-    #     statusline #ffffff
-    #     background #323232
-    #     inactive_workspace #32323200 #32323200 #5c5c5c
-    # }
+    #colors {
+    #    statusline #ffffff
+    #    background #323232
+    #    inactive_workspace #32323200 #32323200 #5c5c5c
+    #}
 }
 
 include /etc/sway/config.d/*
-message.txt
-8 KB
