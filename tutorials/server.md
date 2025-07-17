@@ -1,4 +1,6 @@
 # Server
+This tutorial applies to raspberry pi servers but it can also apply to servers running debian and ubuntu.
+## Localhost server - Home Network
 ### Basics
 Connect to the server:
 ```bash
@@ -98,3 +100,48 @@ Update the trusted domains array:
 
 ### Credentials
 Login via the server's username and password.
+
+## Connect from outside the Home Network
+
+### Creating a dynamic dns
+Dynamic dns allows your server to be found everytime even in case its ip changes.
+1. Go to [DuckDNS](https://www.duckdns.org)
+2. Login and create a domain
+3. Go to the install page and follow the 'linux cron' method
+
+### Forwarding a port
+Port forward the 51820 port through your router menu using the udp protocol.
+- ingoing port: 51820
+- outgoing port: 51820
+- ingoing protocol: UDP
+- outgoing protocol: UDP
+
+### Installing PiVPN - Wireguard on the server
+Go through the PiVPN installation process
+```bash 
+curl -L https://install.pivpn.io | bash
+```
+Be sure to select:
+1. WireGueard (for VPN)
+2. 51820 (Wireguard port)
+3. CloudFlare DNS
+4. Use a public DNS entry (input the address you created using DuckDNS)
+
+Reboot the system and when it boots back up 
+```bash
+pivpn add
+```
+Finally generate a qr to connect via wireguard to your newly created server :)
+```bash
+pivpn -qr
+```
+
+### Maintenance
+When we need to perform some kind of maintenance to our nextcloud server we first need to put in in maintenance mode:
+```bash
+sudo -u www-data php /var/www/html/nextcloud/occ maintenance:mode --on
+```
+Now let's say we want to migrate to a bigger drive.
+```bash
+sudo -u www-data php /var/www/html/nextcloud/occ maintenance:mode --off
+```
