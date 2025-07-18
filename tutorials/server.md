@@ -142,6 +142,33 @@ When we need to perform some kind of maintenance to our nextcloud server we firs
 sudo -u www-data php /var/www/html/nextcloud/occ maintenance:mode --on
 ```
 Now let's say we want to migrate to a bigger drive.
+
+(Optional) Make a quick backup of the data directory. Its the directory your files are stored in.
+```bash
+cp -a /var/www/html/nextcloud/data/. ~/data-backup
+```
+Mount your new storage unit.
+
+Give the correct permissions to the new data directory
+```bash
+sudo chown -R www-data:www-data /media/passport/data/
+```
+
+Change the datadirectory from inside the nextcloud configuration to the one we created.
+
+(Optional) Make a database backup
+```bash
+sudo mysqldump nextcloud > dump.sql
+```
+
+Update the database entry regarding the storage location
+```sql
+use nextcloud;
+
+update oc_storages set id='local::/media/passport/data/' where id='local::/var/www/html/nextcloud/data/';
+```
+
+Turn off maintenance mode and enjoy the additional storage
 ```bash
 sudo -u www-data php /var/www/html/nextcloud/occ maintenance:mode --off
 ```
