@@ -29,6 +29,7 @@ Useful commands:
 - Large movement
     - **gg**: beginning of a document
     - **G**: end of a document
+    - **0**: start of a line
     - **$**: end of a line 
 
 
